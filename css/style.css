@@ -1,0 +1,107 @@
+/* 노멀라이징 */
+*{
+    margin :0 ; 
+    padding: 0 ;
+  } 
+  ul,li {
+    list-style: none ;
+  }
+  a{
+    color: inherit ;
+    text-decoration: none ;
+  } 
+  /* 라이브러리 */
+  .cell{
+    float: left ;
+  }
+  .r-cell{
+    float: right ;
+  }
+  .row::after{
+    display: block ;
+    clear: both ;
+    content: "";
+  }
+  /* 스타일 */
+  .top-bar{
+    width: 800px ;
+    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .top-bar > ul > li {
+    width: 25% ;
+    text-align: center ;
+    line-height: 40px ;
+    background-color: #ddd ;
+    position: relative ;
+  }
+  .top-bar > ul > li:hover{
+      background-color: #aaa;
+  }
+  .top-bar > ul > li > ul {
+    background-color: #aaa ;
+    position: absolute ;
+    width: 100% ;
+    display: none ;
+  }
+  
+  .top-bar > ul > li:hover > ul{
+    display: block ;
+  }
+  .top-bar > ul > li > ul > li > ul{
+    background-color: #888 ;
+    color: white ;
+    position: absolute ;
+    width: 100% ;
+    top: 0 ;
+    left: 100% ;
+    display: none ;
+  }
+  .top-bar > ul > li > ul > li:hover > ul{
+    display: block ;
+  }
+  .top-bar > ul > li > ul > li{
+    position: relative ;
+  }
+ 
+  .main-img{
+      margin: 0 auto;
+      margin-top: 50px;
+      position: relative;
+  } 
+  .main-img > iframe{
+      position: absolute;
+      top: 20;
+      left: 500;
+  }
+    .main-wrap{
+        width: 1200px;
+        height: 2000px;
+        background-color: blue;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    .main-wrap > .left-wrap{
+        width: 700px;
+        height: 2000px;
+        background-color: blueviolet;
+    }
+    .main-wrap > .left-wrap > .content-box{
+        width: 100%;
+        height: 200px;
+        background-color: brown;
+    }
+    .main-wrap > .left-wrap > .content-box > .img-box{
+        width: 380px;
+        height: 100%;
+        background-color: burlywood;
+        background-image: url();
+    }
+    .main-wrap > .left-wrap > .content-box > .text-box{
+        width: 300px;
+        height: 100%;
+        background-color: sienna;
+    }
